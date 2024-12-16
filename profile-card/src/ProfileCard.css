@@ -1,0 +1,152 @@
+@font-face {
+    font-family: 'DarkSoulsFont';
+    src: url('Dark-Soul/OptimusPrinceps.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* General Body Styling */
+body {
+    margin: 0;
+    background-color: #0c0c0c;
+    background-image: url("https://www.transparenttextures.com/patterns/dark-denim.png");
+    background-blend-mode: multiply;
+    font-family: 'DarkSoulsFont', serif;
+    color: #c0a16b;
+}
+
+/* Profile Card */
+.profile-card {
+    font-family: 'DarkSoulsFont', serif;
+    border: 2px solid #5a3d2b;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.8), 
+                0 0 15px rgba(255, 140, 0, 0.4);
+    padding: 20px;
+    text-align: center;
+    max-width: 300px;
+    margin: 50px auto;
+    background: linear-gradient(135deg, #1b1b1b, #141414);
+    color: #c0a16b;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(255, 140, 0, 0.9), 
+                0 0 25px rgba(255, 69, 0, 0.5);
+}
+
+/* Name Styling */
+.profile-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #d77d20;
+    text-shadow: 0 0 12px rgba(255, 140, 0, 0.7);
+    font-family: 'DarkSoulsFont', serif;
+}
+
+/* Profile Email */
+.profile-email {
+    display: inline-block;
+    color: #d77d20; /* Ember orange */
+    text-decoration: none;
+    margin: 10px 0;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.profile-email:hover {
+    text-decoration: underline;
+    color: #ff9d35; /* Bright flame orange */
+    text-shadow: 0 0 15px rgba(255, 165, 0, 0.8);
+}
+
+/* Social Links */
+.profile-socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.social-icon {
+    font-size: 1.8rem;
+    color: #7a5f46; /* Tarnished gold */
+    transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.social-icon:hover {
+    color: #ff9d35; /* Ember glow */
+    text-shadow: 0 0 10px rgba(255, 140, 0, 0.8);
+    transform: scale(1.2);
+}
+
+/* Ember Effect */
+.profile-card:hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: radial-gradient(circle at 50% 50%, transparent, transparent 60%, rgba(255, 69, 0, 0.4));
+    animation: emberGlow 1.5s infinite alternate;
+    z-index: 0;
+}
+
+.profile-card:hover .ember-container {
+    display: block;
+}
+
+/* Embers Animation Container */
+.ember-container {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.ember {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 69, 0, 0.8);
+    border-radius: 50%;
+    opacity: 0;
+    animation: emberFly 2s infinite ease-in-out;
+}
+
+/* Keyframes for Ember Animation */
+@keyframes emberFly {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(calc(-50px + 100px * random()), calc(-100px - 50px * random())) scale(0.8);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(calc(-100px + 200px * random()), calc(-200px - 100px * random())) scale(0.5);
+        opacity: 0;
+    }
+}
+
+@keyframes emberGlow {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 140, 0, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(255, 140, 0, 0.8);
+    }
+}
