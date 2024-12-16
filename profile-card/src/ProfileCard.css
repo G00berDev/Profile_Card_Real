@@ -5,7 +5,7 @@
     font-style: normal;
 }
 
-/* General Body Styling */
+
 body {
     margin: 0;
     background-color: #0c0c0c;
@@ -15,7 +15,7 @@ body {
     color: #c0a16b;
 }
 
-/* Profile Card */
+
 .profile-card {
     font-family: 'DarkSoulsFont', serif;
     border: 2px solid #5a3d2b;
@@ -38,7 +38,6 @@ body {
                 0 0 25px rgba(255, 69, 0, 0.5);
 }
 
-/* Name Styling */
 .profile-name {
     font-size: 1.8rem;
     font-weight: bold;
@@ -48,10 +47,10 @@ body {
     font-family: 'DarkSoulsFont', serif;
 }
 
-/* Profile Email */
+
 .profile-email {
     display: inline-block;
-    color: #d77d20; /* Ember orange */
+    color: #d77d20;
     text-decoration: none;
     margin: 10px 0;
     font-size: 1rem;
@@ -61,7 +60,7 @@ body {
 
 .profile-email:hover {
     text-decoration: underline;
-    color: #ff9d35; /* Bright flame orange */
+    color: #ff9d35; 
     text-shadow: 0 0 15px rgba(255, 165, 0, 0.8);
 }
 
@@ -75,17 +74,17 @@ body {
 
 .social-icon {
     font-size: 1.8rem;
-    color: #7a5f46; /* Tarnished gold */
+    color: #7a5f46;
     transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.2s ease;
 }
 
 .social-icon:hover {
-    color: #ff9d35; /* Ember glow */
+    color: #ff9d35;
     text-shadow: 0 0 10px rgba(255, 140, 0, 0.8);
     transform: scale(1.2);
 }
 
-/* Ember Effect */
+
 .profile-card:hover::after {
     content: "";
     position: absolute;
@@ -103,7 +102,7 @@ body {
     display: block;
 }
 
-/* Embers Animation Container */
+
 .ember-container {
     display: none;
     position: absolute;
@@ -126,7 +125,7 @@ body {
     animation: emberFly 2s infinite ease-in-out;
 }
 
-/* Keyframes for Ember Animation */
+
 @keyframes emberFly {
     0% {
         transform: translate(0, 0) scale(1);

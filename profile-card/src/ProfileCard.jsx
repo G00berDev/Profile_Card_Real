@@ -1,5 +1,5 @@
 import React from "react";
-import "./ProfileCard.css"; // Importing the CSS file
+import "./ProfileCard.css";
 import {
 FaGithub,
 FaInstagram,
@@ -11,7 +11,7 @@ FaMapMarkerAlt,
 } from "react-icons/fa";
 
 const ProfileCard = ({
-profileImage = "https://via.placeholder.com/150", // Default profile image
+profileImage = "https://via.placeholder.com/150",
 firstName,
 lastName,
 jobTitle,
@@ -23,18 +23,13 @@ socialLinks = {},
 }) => {
 return (
 <div className="profile-card">
-    {/* Profile Image */}
     <img
     src={profileImage}
     alt={`${firstName} ${lastName}'s profile`}
     className="profile-image"
     />
-
-    {/* Name and Job Title */}
     <h2 className="profile-name">{`${firstName} ${lastName}`}</h2>
     <p className="profile-job-title">{jobTitle}</p>
-
-    {/* Location and Phone */}
     <div className="profile-details">
     {location && (
         <p className="profile-location">
@@ -47,16 +42,10 @@ return (
         </p>
     )}
     </div>
-
-    {/* Email */}
     <a href={`mailto:${email}`} className="profile-email">
     {email}
     </a>
-
-    {/* Bio */}
     <p className="profile-bio">{bio}</p>
-
-    {/* Social Media Links */}
     <div className="profile-socials">
     {socialLinks.github && (
         <a

@@ -3,7 +3,7 @@ import ProfileCard from "./ProfileCard";
 
 const App = () => {
 const user = {
-profileImage: "https://via.placeholder.com/150", // Replace with your image URL
+profileImage: "https://via.placeholder.com/150", 
 firstName: "Stryder",
 lastName: "Bateman",
 jobTitle: "Aspiring Software Engineer",
